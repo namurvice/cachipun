@@ -6,6 +6,7 @@ function MostrarNombre(){
 /*const azar = Math.florr(math.random() * 3) + 1;
 const juUsuario = document.getElementById('jusuario) esto se puede guardar en una variable*/
 
+//fuction para que las imagen del usuario cambie cuando elija piedra, papel o tijeras
 function jugadaUsuario(jugada){
    if (jugada==1){
       document.querySelector('#Jusuario').src="img/piedra.png";
@@ -15,3 +16,16 @@ function jugadaUsuario(jugada){
       document.querySelector('#Jusuario').src="img/tijera.png";
    }
 }
+
+function jugadaBot(){
+   let azar = Math.floor(Math.random()*3)+1;
+   const bot = document.querySelector('#Jbot'). src;
+   if (azar == 1){
+      bot = 'img/piedra.png';
+   }else if(azar == 2){
+      bot = 'img/papel.png';
+   }else if(azar==3){
+      bot = 'img/tijera.png';
+   }
+}
+
