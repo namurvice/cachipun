@@ -53,3 +53,8 @@ function puntaje(u,b){
    }
 }
 
+//boton reiniciar
+function reiniciar(){
+   
+}
+
