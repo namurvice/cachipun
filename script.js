@@ -15,17 +15,19 @@ function jugadaUsuario(jugada){
    }else if(jugada==3){
       document.querySelector('#Jusuario').src="img/tijera.png";
    }
+   jugadaBot();
 }
 
+//function de la jugada del bot
 function jugadaBot(){
    let azar = Math.floor(Math.random()*3)+1;
-   const bot = document.querySelector('#Jbot'). src;
+   const bot = document.querySelector('#Jbot');
    if (azar == 1){
-      bot = 'img/piedra.png';
+      bot.src = 'img/piedra.png';
    }else if(azar == 2){
-      bot = 'img/papel.png';
-   }else if(azar==3){
-      bot = 'img/tijera.png';
+      bot.src = 'img/papel.png';
+   }else if(azar == 3){
+      bot.src = 'img/tijera.png';
    }
 }
 
