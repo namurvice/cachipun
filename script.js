@@ -1,8 +1,12 @@
+//variables globales
+let empates = 0;
+let ptsUsuario = 0;
+let ptsBot = 0;
+
 function MostrarNombre(){
    let Nombre = document.querySelector('#nombreUsuario').value;
    document.querySelector('#jugador1Nombre').textContent = Nombre;
 }
-
 /*const azar = Math.florr(math.random() * 3) + 1;
 const juUsuario = document.getElementById('jusuario) esto se puede guardar en una variable*/
 
@@ -15,7 +19,9 @@ function jugadaUsuario(jugada){
    }else if(jugada==3){
       document.querySelector('#Jusuario').src="img/tijera.png";
    }
-   jugadaBot();
+
+   let jb = jugadaBot();
+   puntaje(jugada, jb);
 }
 
 //function de la jugada del bot
@@ -28,6 +34,22 @@ function jugadaBot(){
       bot.src = 'img/papel.png';
    }else if(azar == 3){
       bot.src = 'img/tijera.png';
+   }
+   return azar;
+}
+ 
+//puntaje del juego
+function puntaje(u,b){
+   
+   if((u==1 && b==1) || (u==2 && b==2) || (u==3 && b==3)){
+      empates++;
+      document.querySelector('#ptsEmpates').textContent = empates;
+   }else if((u>b)){
+      ptsUsuario++;
+      document.querySelector('#ptsJugador1').textContent = ptsUsuario;
+   }else if((u<b)){
+      ptsBot++;
+      document.querySelector('#ptsJugador2').textContent = ptsBot;
    }
 }
 
