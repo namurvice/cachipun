@@ -55,6 +55,12 @@ function puntaje(u,b){
 
 //boton reiniciar
 function reiniciar(){
-   
+   empates=0;
+   ptsUsuario=0;
+   ptsBot=0;
+   document.querySelector('#ptsEmpates').textContent = empates;
+   document.querySelector('#ptsJugador1').textContent = ptsUsuario;
+   document.querySelector('#ptsJugador2').textContent = ptsBot;
+   document.querySelector('#jugador1Nombre').textContent = 'Usuario';
 }
 

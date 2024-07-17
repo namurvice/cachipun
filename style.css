@@ -9,3 +9,7 @@ aside {
     border-right: 1px solid #ccc;
 }
 
+.img:hover {
+    filter: sepia(60%);
+}
+
