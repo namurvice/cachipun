@@ -1,7 +1,9 @@
 .img {
     width: 100px;
     cursor: pointer;
+    transform: width 1s;
 }
+
 .img-jugada {
     width: 150px;
 }
@@ -10,6 +12,17 @@ aside {
 }
 
 .img:hover {
-    filter: sepia(60%);
+    filter: saturate(200%);
+    width: 110px;
+}
+
+#aside{
+    background-color:rgb(131, 28, 28);
+    color:rgb(0, 0, 0);
+}
+
+#pantJuego{
+    background-image: url(img/ImgVintage3.jpg);
+    filter: sepia(20%);
 }
 
